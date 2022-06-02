@@ -11,6 +11,14 @@
   </head>
 
   <body>
+    <nav class="navbar navbar-light bg-light justify-content-between" style="margin-bottom: 33px; padding: 10px">
+      <a class="navbar-brand" href="/lists">Movies</a>
+
+      <form class="form-inline">
+        <a class="btn btn-outline-secondary" href="/lists" role="button">Lists</a>
+        <a class="btn btn-outline-secondary" href="/lists/new" role="button">New</a>
+      </form>
+    </nav>
     <%= yield %>
   </body>
 </html>

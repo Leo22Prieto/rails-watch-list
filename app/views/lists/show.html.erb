@@ -1,0 +1,16 @@
+<h1><%= @list.name %></h1>
+
+<% @list.movies.each do |movie| %>
+  <div class="card card-body d-flex justify-content-around" style="width: 18rem;">
+    <h5 class="card-title"><%= movie.title %></h5>
+    <p class="card-text"><%= movie.overview %></p>
+    <p>Comment</p>
+    <p><%= link_to "Delete",
+                  bookmark_path(movie),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %></p>
+  </div>
+<% end %>
+
+<%= link_to 'Back', lists_path %> |
+<%= link_to 'Leave a comment', new_list_bookmark_path(@list) %>
