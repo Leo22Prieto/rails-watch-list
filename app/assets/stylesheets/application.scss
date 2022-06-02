@@ -12,6 +12,14 @@
 @import "components/index";
 @import "pages/index";
 
-body {
-  padding: 10px;
+.cards-structure {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 16px;
+  flex-grow: 1;
+  padding: 15px;
+}
+
+a {
+  text-decoration: none;
 }

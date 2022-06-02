@@ -1,4 +1,17 @@
-<h1>My lists</h1>
-<% @lists.each do |list| %>
-  <li><%= link_to list.name, list_path(list) %></li>
-<% end %>
+<div class="card text-white text-end" style="marg">
+  <img src="https://wallpapercave.com/wp/wp7065503.jpg" class="card-img" alt="...">
+  <div class="card-img-overlay">
+    <h1 style="font-size: 5vw; margin-top: 12%; margin-right: 5%">My lists</h1>
+  </div>
+</div>
+
+
+  <div class="cards-structure">
+    <% @lists.each do |list| %>
+      <div class="card text-center" style="width: 18rem;">
+        <div class="card-body">
+          <h1><a><%= link_to list.name, list_path(list) %></a></h1>
+        </div>
+      </div>
+    <% end %>
+  </div>
